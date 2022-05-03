@@ -5,6 +5,7 @@ import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.a.luxurycar.R
 import com.a.luxurycar.code_files.base.BaseFragment
@@ -42,6 +43,12 @@ class LoginFragment :  BaseFragment<LoginViewModel, FragmentLoginBinding, LoginR
                 findNavController().navigate(R.id.registerFragment)
           //  }
            
+        }
+        binding.btnLogin.setOnClickListener {
+            if (isValidation()) {
+                Toast.makeText(requireContext(),"Login Successfully",Toast.LENGTH_LONG).show()
+              }
+
         }
         binding.imgViewEye.setOnClickListener {
             isShowPassword = !isShowPassword
