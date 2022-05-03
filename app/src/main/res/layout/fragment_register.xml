@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".code_files.ui.auth.fragment.RegisterFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/consLayoutBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp">
+
+
+            <ImageView
+                android:id="@+id/imgViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/ic_main_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/app_name" />
+            <TextView
+                android:id="@+id/txtViewRegisterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:text="Register"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewLogo" />
+
+            <TextView
+                android:id="@+id/txtViewRegisterMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:minLines="1"
+                android:text="Please Enter The Belos Details"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewRegisterTitle" />
+
+            <TextView
+                android:id="@+id/txtViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:autoSizeStepGranularity="2sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewRegisterMessage" />
+
+            <EditText
+                android:id="@+id/edtTextName"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Enter Your Name"
+                android:inputType="textEmailAddress"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextName"
+                app:layout_constraintStart_toStartOf="@+id/edtTextName"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextName" />
+
+
+            <TextView
+                android:id="@+id/txtViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:autoSizeStepGranularity="2sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextName" />
+
+            <EditText
+                android:id="@+id/edtTextEmail"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:hint="Enter your Email"
+                android:padding="0dp"
+                android:inputType="textEmailAddress"
+                android:paddingStart="0dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextEmail"
+                app:layout_constraintStart_toStartOf="@+id/edtTextEmail"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
+
+            <TextView
+                android:id="@+id/txtViewMobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Mobile No."
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:autoSizeStepGranularity="2sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
+
+            <EditText
+                android:id="@+id/edtTextMobileNo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:paddingEnd="30dp"
+                android:padding="0dp"
+                android:hint="Enter Your Mobile Number"
+                android:inputType="textEmailAddress"
+                android:ellipsize="end"
+                android:paddingStart="0dp"
+                android:textSize="16dp"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewMobileNo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextMobileNo"
+                app:layout_constraintStart_toStartOf="@+id/edtTextMobileNo"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextMobileNo" />
+
+
+            <TextView
+                android:id="@+id/txtViewPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:autoSizeStepGranularity="2sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextMobileNo" />
+
+            <EditText
+                android:id="@+id/edtTextPassword"
+                android:layout_width="378dp"
+                android:layout_height="44dp"
+                android:padding="0dp"
+                android:backgroundTint="@color/white"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingStart="0dp"
+                android:hint="Enter Your Mobile Number"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textSize="16dp"
+                android:paddingEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewPassword" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextPassword"
+                app:layout_constraintStart_toStartOf="@+id/edtTextPassword"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextPassword" />
+
+            <TextView
+                android:id="@+id/txtViewConfirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Confirm Password"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:autoSizeStepGranularity="2sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextPassword" />
+
+            <EditText
+                android:id="@+id/edtTextConfirmPassword"
+                android:layout_width="378dp"
+                android:layout_height="44dp"
+                android:backgroundTint="@color/white"
+                android:ellipsize="end"
+                android:padding="0dp"
+                android:gravity="center_vertical"
+                android:hint="Enter Your Mobile Number"
+                android:inputType="textPassword"
+                android:paddingStart="0dp"
+                android:textSize="16dp"
+                android:maxLines="1"
+                android:paddingEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewConfirmPassword" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/view_color"
+                app:layout_constraintEnd_toEndOf="@+id/edtTextConfirmPassword"
+                app:layout_constraintStart_toStartOf="@+id/edtTextConfirmPassword"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextConfirmPassword" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:background="@drawable/drawable_button_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtTextConfirmPassword"
+                app:rippleColor="@color/white" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consLayoutBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtViewDontHaveAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="Don't have an account ? "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtViewRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="@string/title_register"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/txtViewDontHaveAcc"
+            app:layout_constraintStart_toEndOf="@+id/txtViewDontHaveAcc"
+            app:layout_constraintTop_toTopOf="@+id/txtViewDontHaveAcc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBarLoginPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    >
+
+
+    <ImageView
+        android:id="@+id/imgViewMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:src="@mipmap/ic_menu"
+        />
+
+    <ImageView
+        android:id="@+id/imgViewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_menu"
+
+        />
+
+
+
+
+</androidx.appcompat.widget.Toolbar>
+<!--<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/purple_700">
+
+    <ImageView
+        android:id="@+id/imgViewMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_hamburger"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/d10dp"
+        android:padding="@dimen/d5dp"/>
+
+
+    <TextView
+        android:id="@+id/txtViewToolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/imgViewMenu"
+        android:layout_toStartOf="@+id/imgViewSearch"
+        android:maxLength="32"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/d17sp" />
+
+
+    <ImageView
+        android:id="@+id/imgViewSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@mipmap/ic_search_white"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/d10dp"
+        android:padding="@dimen/d5dp"/>
+
+
+
+
+</RelativeLayout>-->
+
