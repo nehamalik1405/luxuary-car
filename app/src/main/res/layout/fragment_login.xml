@@ -54,7 +54,6 @@
                       android:id="@+id/txtViewLoginMessage"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:layout_marginTop="5dp"
                       android:minLines="1"
                       android:fontFamily="@font/muli_bold"
                       android:text="@string/please_enter_your_login_details"
@@ -93,13 +92,14 @@
                           android:id="@+id/edtTextEmail"
                           style="@style/EditTextField"
                           android:layout_width="0dp"
-                          android:layout_height="40dp"
+                          android:layout_height="wrap_content"
                           android:hint="@string/johndeo_hotmail_com"
                           android:inputType="textEmailAddress"
                           android:gravity="center_vertical"
                           app:layout_constraintTop_toBottomOf="@+id/txtViewEmail"
                           app:layout_constraintStart_toStartOf="parent"
                           app:layout_constraintEnd_toEndOf="parent"
+
                           />
 
                       <View
@@ -129,7 +129,8 @@
 
                       <EditText
                           android:id="@+id/edtTextPassword"
-                          android:layout_width="0dp"
+                          android:layout_width="@dimen/margin_0dp"
+                          android:layout_height="wrap_content"
                           style="@style/EditTextField"
                           android:paddingEnd="40dp"
                           android:hint="@string/str_password"
@@ -182,7 +183,7 @@
                       android:id="@+id/btnLogin"
                       style="@style/buttonFieldStyle"
                       android:layout_width="0dp"
-                      android:layout_height="50dp"
+                      android:layout_height="wrap_content"
                       android:textAllCaps="true"
                       android:text="@string/titlr_login"
                       app:layout_constraintEnd_toEndOf="parent"
@@ -295,8 +296,8 @@
             android:layout_marginTop="0dp"
             android:textSize="15sp"
             android:fontFamily="@font/muli_semi_bold"
-            android:text="@string/don_t_have_an_account"
             android:textColor="#AAACBB"
+            android:text="@string/don_t_have_an_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
