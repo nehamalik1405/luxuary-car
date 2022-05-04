@@ -23,11 +23,11 @@ import com.a.luxurycar.databinding.FragmentRegisterBinding
 
 class RegisterFragment : BaseFragment<RegistrationViewModel,FragmentRegisterBinding,RegistrationRepository>() {
     var isShowPassword = false
-    var name = ""
-    var email = ""
-     var mobileNo = ""
-    var password = ""
-    var confirm_password = ""
+    var name=""
+    var email= ""
+    var mobileNo=""
+    var password=""
+    var confirm_password=""
     override fun getViewModel() = RegistrationViewModel::class.java
 
 
@@ -87,9 +87,9 @@ class RegisterFragment : BaseFragment<RegistrationViewModel,FragmentRegisterBind
 
     }
     private fun getDataFromEditField() {
-       name = binding.edtTextName.text.toString().trim()
+        name = binding.edtTextName.text.toString().trim()
         email = binding.edtTextEmail.text.toString().trim()
-        mobileNo = binding.edtTextMobileNo.toString().trim()
+        mobileNo = binding.edtTextMobileNo.text.toString().trim()
         password = binding.edtTextPassword.text.toString().trim()
         confirm_password = binding.edtTextConfirmPassword.text.toString().trim()
     }
@@ -107,7 +107,7 @@ class RegisterFragment : BaseFragment<RegistrationViewModel,FragmentRegisterBind
             return false
         }
         else if (Utils.isEmptyOrNull(mobileNo)) {
-            binding.edtTextEmail.showErrorAndSetFocus(getStringFromResource(R.string.error_empty_mobile_no))
+            binding.edtTextMobileNo.showErrorAndSetFocus(getStringFromResource(R.string.error_empty_mobile_no))
             return false
         }
         else if (Utils.isEmptyOrNull(password)) {

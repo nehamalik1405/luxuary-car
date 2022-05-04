@@ -151,13 +151,14 @@
                    app:layout_constraintStart_toStartOf="parent"
                    app:layout_constraintTop_toBottomOf="@+id/edtTextEmail" />
 
-               <EditText
+               <androidx.appcompat.widget.AppCompatEditText
                    android:id="@+id/edtTextMobileNo"
                    android:layout_width="0dp"
                    android:layout_height="wrap_content"
                    style="@style/EditTextField"
                    android:hint="Mobile Number"
                    android:imeOptions="actionNext"
+                   android:maxLength="10"
                    android:inputType="phone"
                    android:gravity="center_vertical"
                    android:backgroundTint="@color/white"
@@ -261,6 +262,7 @@
                 />
 
                <View
+                   android:id="@+id/viewConfirmPassword"
                    android:layout_width="0dp"
                    android:layout_height="1dp"
                    android:background="@color/view_color"
@@ -280,7 +282,7 @@
                 android:textAllCaps="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtTextConfirmPassword"
+                app:layout_constraintTop_toBottomOf="@+id/viewConfirmPassword"
                 app:rippleColor="@color/white" />
 
 

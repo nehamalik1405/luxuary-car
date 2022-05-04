@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -22,6 +25,15 @@
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassword"
+        android:name="com.a.luxurycar.code_files.ui.change_password.ForgotPassword"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPassword_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

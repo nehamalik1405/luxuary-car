@@ -50,6 +50,9 @@ class LoginFragment :  BaseFragment<LoginViewModel, FragmentLoginBinding, LoginR
               }
 
         }
+        binding.txtViewForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.forgotPassword)
+        }
         binding.imgViewEye.setOnClickListener {
             isShowPassword = !isShowPassword
             if (isShowPassword) {
