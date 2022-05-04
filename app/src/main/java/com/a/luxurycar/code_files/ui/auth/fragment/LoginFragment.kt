@@ -1,5 +1,6 @@
 package com.a.luxurycar.code_files.ui.auth.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
@@ -10,6 +11,8 @@ import androidx.navigation.fragment.findNavController
 import com.a.luxurycar.R
 import com.a.luxurycar.code_files.base.BaseFragment
 import com.a.luxurycar.code_files.repository.LoginRepository
+import com.a.luxurycar.code_files.ui.auth.AuthActivity
+import com.a.luxurycar.code_files.ui.home.HomeActivity
 import com.a.luxurycar.code_files.view_model.LoginViewModel
 import com.a.luxurycar.common.requestresponse.ApiAdapter
 import com.a.luxurycar.common.requestresponse.ApiService
@@ -47,6 +50,8 @@ class LoginFragment :  BaseFragment<LoginViewModel, FragmentLoginBinding, LoginR
         binding.btnLogin.setOnClickListener {
             if (isValidation()) {
                 Toast.makeText(requireContext(),"Login Successfully",Toast.LENGTH_LONG).show()
+                startActivity(Intent(requireContext(), HomeActivity::class.java))
+                (context as AuthActivity).finish()
               }
 
         }

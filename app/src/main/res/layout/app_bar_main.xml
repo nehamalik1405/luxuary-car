@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".code_files.ui.home.HomeActivity">
+    tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="match_parent">
 
-        <include layout="@layout/toolbar"/>
+        <LinearLayout
+            android:id="@+id/linLayAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomNavigation"
+            android:orientation="vertical">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <include layout="@layout/content_main" />
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar" />
 
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <include
+                layout="@layout/content_main"
+                android:layout_marginStart="@dimen/margin_15_dp"
+                android:layout_marginEnd="@dimen/margin_15_dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:paddingTop="@dimen/margin_5_dp"
+            app:itemIconSize="@dimen/margin_20_dp"
+            app:itemIconTint="@color/color_bottom_navigation_selection"
+            app:itemTextColor="@color/color_bottom_navigation_selection"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
