@@ -29,7 +29,11 @@
     <color name="proper_white">#FFFFFF</color>
     <color name="button_disable_text_color">#A5A4AB</color>
     <color name="green">#026337</color>
+    <color name="disable_color">#676767</color>
+    <color name="card_color">#E7E5E6</color>
     <color name="sub_title_color">#A4A6AF</color>
     <color name="color_blue">#1066d2</color>
+    <color name="color_light_black">#242634</color>
+    <color name="text_color_grey">#717F8B</color>
 
 </resources>

@@ -1,13 +1,16 @@
-package com.a.luxurycar.code_files.ui.home
+package com.a.luxurycar.code_files.ui.home.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.a.luxurycar.R
+import com.a.luxurycar.code_files.ui.home.model.ImageModel
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_image.view.*
 
-class ImageAdapter: RecyclerView.Adapter<ImageAdapter.ViewiewHolder>()  {
+class ImageAdapter(val context: Context, private val list:ArrayList<ImageModel>): RecyclerView.Adapter<ImageAdapter.ViewiewHolder>()  {
     //   (val context: Context, private val list:ArrayList<ImageModel>)
 
 
@@ -24,12 +27,12 @@ class ImageAdapter: RecyclerView.Adapter<ImageAdapter.ViewiewHolder>()  {
 
     override fun onBindViewHolder(holder: ViewiewHolder, position: Int) {
 
-        // val item = list[position]
-        // Picasso.get().load(item.image).into(holder.imgViewItem);
+        val item = list[position]
+        item.image?.let { Picasso.get().load(it).into(holder.imgViewItem) };
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return list.size
     }
 
     inner  class ViewiewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

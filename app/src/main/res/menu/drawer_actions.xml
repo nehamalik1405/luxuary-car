@@ -12,7 +12,7 @@
             app:iconTint="#FFEB3B"/>
 
         <item
-            android:id="@+id/nav_car_listing"
+            android:id="@+id/carListFragment"
             android:icon="@drawable/ic_arrow_back"
             android:title="@string/menu_car_listing" />
 

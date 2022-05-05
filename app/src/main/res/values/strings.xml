@@ -62,4 +62,15 @@
     <string name="menu_Inspecting">Inspecting</string>
 
     <string name="menu_sellur_car">Sell your Car</string>
+    <string name="more_options"><u>More Options +</u></string>
+
+
+    /////////////////////////
+
+    <string name="view_profile">View Profile</string>
+    <string name="language">Language</string>
+    <string name="terms_condition">Terms &amp; Condition</string>
+    <string name="logout">Logout</string>
+
+    //////////////////////////////
 </resources>

@@ -27,7 +27,8 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     lateinit var navHostFragment: NavHostFragment
     lateinit var navController: NavController
-    lateinit var imageViewMenu : ImageView
+    lateinit var imageViewMenu: ImageView
+    lateinit var imageViewProfile: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +37,32 @@ class HomeActivity : AppCompatActivity() {
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigation)
         imageViewMenu = findViewById(R.id.imgViewMenu)
+        imageViewProfile = findViewById(R.id.imgViewProfile)
+
         menageClickEvents()
 
-        navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+        imageViewProfile.setOnClickListener{
+            openOrCloseDrawerProfile()
+        }
+
+        navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main)
+
+        binding.navRightView.setNavigationItemSelectedListener(object :
+            NavigationView.OnNavigationItemSelectedListener {
+            override fun onNavigationItemSelected(item: MenuItem): Boolean {
+                val itemId = item.itemId
+
+                if (itemId == R.id.nav_profiles) {
+
+                }
+
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
+                return true
+            }
+        })
+
 
         val navInflater = navHostFragment.navController.navInflater
         val graph = navInflater.inflate(R.navigation.nav_home)
@@ -54,6 +77,10 @@ class HomeActivity : AppCompatActivity() {
             bottomNavigation,
             navController
         ) // to connect bottom navigation menu to nav control
+        NavigationUI.setupWithNavController(
+            binding.navRightView,
+            navController
+        )
 
         binding.navView.setNavigationItemSelectedListener(object :
             NavigationView.OnNavigationItemSelectedListener {
@@ -81,6 +108,10 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    private fun openOrCloseDrawerProfile() {
+        binding.drawerLayout.openDrawer(GravityCompat.END)
+    }
+
     private fun openOrCloseDrawer() {
         if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             binding.drawerLayout.closeDrawer(GravityCompat.START)
@@ -94,7 +125,7 @@ class HomeActivity : AppCompatActivity() {
         val builder1 = AlertDialog.Builder(this)
         builder1.setMessage("Are You Sure You Want to Exit the App?")
         builder1.setCancelable(true)
-        builder1.setPositiveButton("Yes") { dialog, id -> super.onBackPressed()}
+        builder1.setPositiveButton("Yes") { dialog, id -> super.onBackPressed() }
         builder1.setNegativeButton("No") { dialog, id -> dialog.cancel() }
         val alert11 = builder1.create()
         alert11.show()

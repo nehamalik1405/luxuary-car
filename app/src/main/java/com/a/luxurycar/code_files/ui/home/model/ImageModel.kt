@@ -1,4 +1,4 @@
-package com.a.luxurycar.code_files.ui.home
+package com.a.luxurycar.code_files.ui.home.model
 
 import android.media.Image
 
