@@ -109,6 +109,7 @@ class HomeActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+
     private fun menageClickEvents() {
         imageViewMenu.setOnClickListener {
             openOrCloseDrawer()
@@ -136,6 +137,7 @@ class HomeActivity : AppCompatActivity() {
             binding.drawerLayout.openDrawer(GravityCompat.END)
         }
     }
+
 
     override fun onBackPressed() {
         val builder1 = AlertDialog.Builder(this)

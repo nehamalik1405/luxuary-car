@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.a.luxurycar.R
@@ -29,6 +31,10 @@ class AdvertieserSuggestedList(val context: Context): RecyclerView.Adapter<Adver
         holder.recyclerviewSuggestedList.adapter = advertieserSuggestedList
         holder.recyclerviewSuggestedList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL ,false)
 
+        holder.imgViewSuggestedRightArrow.setOnClickListener {
+
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -39,5 +45,6 @@ class AdvertieserSuggestedList(val context: Context): RecyclerView.Adapter<Adver
     inner class ViewiewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val recyclerviewSuggestedList = itemView.recyclerviewSuggestedList
+        val imgViewSuggestedRightArrow = itemView.imgViewSuggestedRightArrow
     }
 }
