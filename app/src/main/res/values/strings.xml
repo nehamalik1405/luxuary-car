@@ -71,6 +71,31 @@
     <string name="language">Language</string>
     <string name="terms_condition">Terms &amp; Condition</string>
     <string name="logout">Logout</string>
+    <string name="title_storage">Storage</string>
+    <string name="title_to_buy">To Buy</string>
+    <string name="title_to_rent">To Rent</string>
+    <string name="title_select_make">Select Make</string>
+    <string name="title_select_model">Select Model</string>
+    <string name="title_year_from">Year From</string>
+    <string name="title_year_to">Year To</string>
+    <string name="title_price_from">Price From</string>
+    <string name="title_price_to">Price To</string>
+    <string name="title_search">Search</string>
+    <string name="title_car_listing">Car listing</string>
+    <string name="str_sort_by">Sort By</string>
+    <string name="str_featured">Featured</string>
+    <string name="str_chevrolet_camaroerui">Chevrolet Camaroerui</string>
+    <string name="str_year">2019</string>
+    <string name="str_kilometer">49000km</string>
+    <string name="str_aed_168_000">AED 168,000</string>
+    <string name="titlr_enquire">Enquire</string>
+    <string name="str_what_s_included">What\'s Included?</string>
+    <string name="str_engine_starts">Engine Starts</string>
+    <string name="str_anti_flat_spot_management">Anti-Flat Spot Management</string>
+    <string name="str_insurance">Insurance</string>
+    <string name="str_battery_trickle_vharging">Battery Trickle Charging</string>
+    <string name="str_interior_preparation_and_sanitization">Interior Preparation and Sanitization</string>
+    <string name="str_tire_rotation_and_checks"><![CDATA[Tire Rotation & Checks]]></string>
 
     //////////////////////////////
 </resources>

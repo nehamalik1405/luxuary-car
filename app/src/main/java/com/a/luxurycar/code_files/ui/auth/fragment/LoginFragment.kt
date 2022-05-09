@@ -42,7 +42,7 @@ class LoginFragment :  BaseFragment<LoginViewModel, FragmentLoginBinding, LoginR
 
     private fun manageListeners() {
         binding.txtViewRegister.setOnClickListener {
-           // if (isValidation()) {
+         //   if (isValidation()) {
                 findNavController().navigate(R.id.registerFragment)
           //  }
            

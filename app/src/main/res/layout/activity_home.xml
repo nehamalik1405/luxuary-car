@@ -15,23 +15,23 @@
        android:layout_height="match_parent" />
 
    <com.google.android.material.navigation.NavigationView
-       android:id="@+id/nav_view"
+       android:id="@+id/navViewLeft"
        android:layout_width="wrap_content"
        android:layout_height="match_parent"
        android:layout_gravity="start"
        android:fitsSystemWindows="true"
        app:itemIconTint="#006138"
        app:headerLayout="@layout/nav_header_main"
-       app:menu="@menu/activity_main_drawer" />
+       app:menu="@menu/drawer_left_menu" />
 
    <com.google.android.material.navigation.NavigationView
-       android:id="@+id/nav_right_view"
+       android:id="@+id/navViewRight"
        android:layout_width="wrap_content"
        android:layout_height="match_parent"
        android:layout_gravity="end"
        android:fitsSystemWindows="true"
        app:headerLayout="@layout/nav_header_right_main"
-       app:menu="@menu/drawer_right_actions" />
+       app:menu="@menu/drawer_right_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

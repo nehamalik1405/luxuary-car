@@ -9,7 +9,7 @@
             android:id="@+id/nav_profiles"
             android:icon="@drawable/ic_arrow_back"
             android:title="@string/view_profile"
-            app:iconTint="#FFEB3B" />
+             />
 
         <item
             android:id="@+id/nav_language"

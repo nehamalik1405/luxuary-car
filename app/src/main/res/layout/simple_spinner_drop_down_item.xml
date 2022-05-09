@@ -5,6 +5,6 @@
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
     android:textSize="15sp"
-    android:padding="10dp"
-    android:textColor="@color/white"
+    android:padding="5dp"
+    android:textColor="@color/black"
     android:singleLine="true" />
